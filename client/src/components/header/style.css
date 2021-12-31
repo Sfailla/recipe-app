@@ -1,0 +1,27 @@
+.header {
+  height: 5rem;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header__logo {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64ffda;
+}
+
+.header__link {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #64ffda;
+}
+
+.header__link span {
+  white-space: nowrap;
+  padding-left: 5px;
+  padding-bottom: 3px;
+}

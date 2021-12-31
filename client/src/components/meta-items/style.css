@@ -1,0 +1,25 @@
+.item__meta {
+  font-size: 1.6rem;
+}
+
+.item__meta-item p {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #64ffda;
+  padding-bottom: 0.5rem;
+}
+
+.item__icon-group {
+  color: #a8b2d1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.item__icon-group span {
+  padding-left: 3px;
+  padding-bottom: 2px;
+  font-size: 1.6rem;
+  color: #a8b2d1;
+}

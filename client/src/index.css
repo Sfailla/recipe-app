@@ -1,0 +1,46 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.6rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #0a192f;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  user-select: none;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  font-size: 4rem;
+  font-weight: 500;
+  margin: 0;
+  padding: 2rem 0;
+  color: #ccd6f6;
+}
+
+@media screen and (max-width: 40em) {
+  html {
+    font-size: 50%;
+  }
+}

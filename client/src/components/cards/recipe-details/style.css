@@ -1,0 +1,150 @@
+.details__card {
+  width: 100%;
+  min-height: 70rem;
+  display: flex;
+  border-radius: 1rem;
+  background-color: #112240;
+  overflow: hidden;
+  margin-top: 2rem;
+  box-shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+}
+
+.details__image {
+  width: 100%;
+  max-width: 50rem;
+}
+
+.details__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details__content {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: min-content 1fr;
+}
+
+.details__meta {
+  width: 100%;
+  max-width: 30rem;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+}
+
+.details__meta p {
+  padding-bottom: 5px;
+}
+
+.details__header {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.details__main {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+  display: flex;
+}
+
+.details__ingredients {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.details__ingredient {
+  color: #64ffda;
+}
+
+.details__ingredient-items {
+  color: #fff;
+}
+
+.details__subtitle {
+  color: #64ffda;
+}
+
+.details__list {
+  color: #fff;
+}
+
+.details__ingredient {
+  list-style-type: square;
+}
+
+.details__ingredient--nested {
+  display: block;
+  padding-left: 1rem;
+  font-size: 1.4rem;
+  color: #64ffda;
+}
+
+.details__instructions {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+}
+
+.details__instruction {
+  color: #64ffda;
+  padding-right: 10px;
+}
+
+.details__instruction:not(:last-child) {
+  margin-bottom: 3px;
+}
+
+.details__instruction-text {
+  color: #fff;
+}
+
+.details__instruction-optional {
+  margin-left: 3px;
+}
+
+@media screen and (max-width: 87.5em) {
+  .details__card {
+    flex-direction: column;
+    width: 100%;
+    max-width: 85rem;
+    margin: 1rem auto 0 auto;
+  }
+  .details__image {
+    width: 100%;
+    max-width: 100%;
+    height: 40rem;
+  }
+}
+
+@media screen and (max-width: 75em) {
+  .details__header {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .details__meta {
+    max-width: 40rem;
+  }
+  .details__meta p {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 43.75em) {
+  .details__image {
+    width: 100%;
+    max-width: 100%;
+    height: 26rem;
+  }
+  .details__main {
+    flex-direction: column;
+  }
+}

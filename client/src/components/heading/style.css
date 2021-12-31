@@ -1,0 +1,19 @@
+.heading {
+  width: 100%;
+  height: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heading-center {
+  justify-content: center;
+}
+
+.heading-left {
+  justify-content: flex-start;
+}
+
+.heading-right {
+  justify-content: flex-end;
+}
