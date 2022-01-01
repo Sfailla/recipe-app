@@ -96,7 +96,6 @@ export default function useRecipe() {
     recipes,
     loading,
     error,
-    addSpecialsToRecipe,
     addRecipe
   }
 }
