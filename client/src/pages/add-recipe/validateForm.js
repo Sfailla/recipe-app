@@ -14,11 +14,11 @@ export default function validateForm(values) {
   }
 
   if (!values.prepTime) {
-    errors.prepTime = 'prepTime field is required'
+    errors.prepTime = 'prep time field is required'
   }
 
   if (!values.cookTime) {
-    errors.cookTime = 'cookTime field is required'
+    errors.cookTime = 'cook time field is required'
   }
 
   return errors
