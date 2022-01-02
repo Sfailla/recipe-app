@@ -14,8 +14,8 @@ const initialValues = {
   images: { full: null, medium: null, small: null }
 }
 
-const initialIngredient = { id: uuidv4(), amount: '', measurement: '', name: '' }
-const initialDirection = { id: uuidv4(), instructions: '', optional: false }
+const initialIngredient = { uuid: uuidv4(), amount: '', measurement: '', name: '' }
+const initialDirection = { uuid: uuidv4(), instructions: '', optional: false }
 
 export default function AddRecipe() {
   const [ingredients, setIngredients] = React.useState([initialIngredient])
@@ -34,13 +34,13 @@ export default function AddRecipe() {
   }
 
   const handleAddIngredient = () => {
-    const ingredient = { id: uuidv4(), amount: '', measurement: '', name: '' }
+    const ingredient = { uuid: uuidv4(), amount: '', measurement: '', name: '' }
     const newIngredient = [...ingredients, ingredient]
     setIngredients(newIngredient)
   }
 
   const handleAddDirection = () => {
-    const direction = { id: uuidv4(), instructions: '', optional: false }
+    const direction = { uuid: uuidv4(), instructions: '', optional: false }
     const newDirection = [...directions, direction]
     setDirections(newDirection)
   }
