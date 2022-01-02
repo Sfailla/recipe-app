@@ -53,7 +53,7 @@ export default function AddRecipe() {
 
   const { addRecipe } = useRecipe()
 
-  function submitForm() {
+  async function submitForm() {
     const formFields = {
       ...values,
       ingredients,
@@ -63,7 +63,7 @@ export default function AddRecipe() {
     setDirections([initialDirection])
     setIngredients([initialIngredient])
 
-    addRecipe(formFields)
+    await addRecipe(formFields)
   }
 
   return (
