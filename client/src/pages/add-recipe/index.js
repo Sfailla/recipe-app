@@ -8,9 +8,9 @@ import validateForm from './validateForm'
 const initialValues = {
   title: '',
   description: '',
-  servings: '',
-  prepTime: '',
-  cookTime: '',
+  servings: 0,
+  prepTime: 0,
+  cookTime: 0,
   images: { full: null, medium: null, small: null }
 }
 
@@ -22,8 +22,11 @@ export default function AddRecipe() {
   const [directions, setDirections] = React.useState([initialDirection])
 
   const handleChangeIngredient = (event, index) => {
+    const isNumberField = event.target.name === 'amount'
     const newIngredients = [...ingredients]
-    newIngredients[index][event.target.name] = event.target.value
+    newIngredients[index][event.target.name] = isNumberField
+      ? parseInt(event.target.value)
+      : event.target.value
     setIngredients(newIngredients)
   }
 
@@ -45,7 +48,7 @@ export default function AddRecipe() {
     setDirections(newDirection)
   }
 
-  const { values, formErrors, handleChange, handleSubmit } = useFormValidation(
+  const { values, formErrors, handleChange, handleChangeNumber, handleSubmit } = useFormValidation(
     initialValues,
     validateForm,
     submitForm
@@ -72,7 +75,12 @@ export default function AddRecipe() {
       <Section className="add-recipe-section">
         <div className="wrapper">
           <form className="form" onSubmit={handleSubmit}>
-            <RecipeForm values={values} error={formErrors} handleChange={handleChange} />
+            <RecipeForm
+              values={values}
+              error={formErrors}
+              handleChange={handleChange}
+              handleChangeNumber={handleChangeNumber}
+            />
             <div className="add-recipe-form__button-wrapper">
               <button className="button submit-button" type="submit">
                 Submit

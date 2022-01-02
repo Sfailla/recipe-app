@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function RecipeForm({ values, error, handleChange }) {
+export default function RecipeForm({ values, error, handleChange, handleChangeNumber }) {
   return (
     <React.Fragment>
       <div className="form-group">
@@ -44,7 +44,7 @@ export default function RecipeForm({ values, error, handleChange }) {
           placeholder="serving amount..."
           className={`form-input ${error.servings ? 'form-input-error' : ''}`}
           type="number"
-          onChange={handleChange}
+          onChange={handleChangeNumber}
           name="servings"
           values={values.servings}
         />
@@ -60,7 +60,7 @@ export default function RecipeForm({ values, error, handleChange }) {
           placeholder="time to prep..."
           className={`form-input ${error.prepTime ? 'form-input-error' : ''}`}
           type="number"
-          onChange={handleChange}
+          onChange={handleChangeNumber}
           name="prepTime"
           values={values.prepTime}
         />
@@ -76,7 +76,7 @@ export default function RecipeForm({ values, error, handleChange }) {
           placeholder="time to cook..."
           className={`form-input ${error.cookTime ? 'form-input-error' : ''}`}
           type="number"
-          onChange={handleChange}
+          onChange={handleChangeNumber}
           name="cookTime"
           values={values.cookTime}
         />

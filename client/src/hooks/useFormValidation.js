@@ -26,6 +26,14 @@ export default function useFormValidation(initialValues = {}, validate, authenti
     }))
   }
 
+  function handleChangeNumber(event) {
+    event.persist()
+    setValues(prevState => ({
+      ...prevState,
+      [event.target.name]: parseInt(event.target.value)
+    }))
+  }
+
   function handleSubmit(event) {
     event.preventDefault()
     let errors = validate(values)
@@ -38,6 +46,7 @@ export default function useFormValidation(initialValues = {}, validate, authenti
     formErrors: errors,
     isSubmitting,
     handleChange,
+    handleChangeNumber,
     handleSubmit
   }
 }
