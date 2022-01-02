@@ -35,13 +35,13 @@ export default function AddRecipe() {
 
   const handleAddIngredient = () => {
     const ingredient = { id: uuidv4(), amount: '', measurement: '', name: '' }
-    const newIngredients = [...ingredients, ingredient]
-    setIngredients(newIngredients)
+    const newIngredient = [...ingredients, ingredient]
+    setIngredients(newIngredient)
   }
 
   const handleAddDirection = () => {
-    const newDirection = [...directions]
-    newDirection.push({ id: uuidv4(), instructions: '', optional: false })
+    const direction = { id: uuidv4(), instructions: '', optional: false }
+    const newDirection = [...directions, direction]
     setDirections(newDirection)
   }
 
